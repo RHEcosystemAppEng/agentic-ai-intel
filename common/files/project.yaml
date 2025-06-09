@@ -1,0 +1,9 @@
+kind: Project
+apiVersion: project.openshift.io/v1
+metadata:
+  name: samouelian-intel
+  labels:
+    kubernetes.io/metadata.name: samouelian-intel
+    maistra.io/member-of: istio-system
+    modelmesh-enabled: 'false'
+    istio-injection: enabled
