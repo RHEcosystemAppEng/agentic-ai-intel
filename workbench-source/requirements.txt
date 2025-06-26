@@ -1,3 +1,4 @@
+tensorflow
 llama-index
 llama-index-vector-stores-postgres
 llama-index-llms-openai-like
