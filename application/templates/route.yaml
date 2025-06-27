@@ -2,7 +2,7 @@ kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
   name: agentic-ai-query
-  namespace: {{ .Release.Namespace }}
+  namespace: {{.Release.Namespace}}
   labels:
     app.kubernetes.io/instance: agentic-ai-query
     app.kubernetes.io/managed-by: Helm
@@ -11,7 +11,7 @@ metadata:
   annotations:
     openshift.io/host.generated: 'true'
 spec:
-  host: agentic-ai-query-samouelian-intel.apps.ai-dev01.kni.syseng.devcluster.openshift.com
+  host: agentic-ai-query-{{.Release.Namespace}}.apps.{{.Values.node-name}}
   to:
     kind: Service
     name: agentic-ai-query-web-application-service

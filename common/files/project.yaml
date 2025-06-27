@@ -1,9 +1,9 @@
 kind: Project
 apiVersion: project.openshift.io/v1
 metadata:
-  name: samouelian-intel
+  name: redhead-ahead
   labels:
-    kubernetes.io/metadata.name: samouelian-intel
+    kubernetes.io/metadata.name: redhat-ahead
     maistra.io/member-of: istio-system
     modelmesh-enabled: 'false'
     istio-injection: enabled
