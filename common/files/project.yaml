@@ -1,7 +1,7 @@
 kind: Project
 apiVersion: project.openshift.io/v1
 metadata:
-  name: redhead-ahead
+  name: redhat-ahead
   labels:
     kubernetes.io/metadata.name: redhat-ahead
     maistra.io/member-of: istio-system
