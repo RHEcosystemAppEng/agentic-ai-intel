@@ -2,7 +2,6 @@ kind: Deployment
 apiVersion: apps/v1
 metadata:
   name: minio
-  namespace: samouelian-intel
   annotations:
     deployment.kubernetes.io/revision: '1'
 spec:
@@ -12,7 +11,6 @@ spec:
       app: minio
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: minio
     spec:

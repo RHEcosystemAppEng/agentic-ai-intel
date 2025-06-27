@@ -1,0 +1,2 @@
+node-name: gretchen.fm2aihpcsed.com #Needed for node-local storage during testing; a different storage class should be configured later
+storage-class: local-storage

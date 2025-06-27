@@ -1,0 +1,33 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: minio-ui
+spec:
+  host: minio-ui-{{.Release.Namespace}}.apps.{{.Values.storage-class}}
+  to:
+    kind: Service
+    name: minio-service
+    weight: 100
+  port:
+    targetPort: ui
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
+  wildcardPolicy: None
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: minio-api
+  namespace: {{.Release.Namespace}}
+spec:
+  host: minio-api-{{.Release.Namespace}}.apps.{{.Values.storage-class}}
+  to:
+    name: minio-service
+    weight: 100
+    kind: Service
+  port:
+    targetPort: api
+  wildcardPolicy: None
+  path: ''
+  alternateBackends: []

@@ -2,7 +2,6 @@ kind: Service
 apiVersion: v1
 metadata:
   name: minio-service
-  namespace: samouelian-intel
 spec:
   ipFamilies:
     - IPv4

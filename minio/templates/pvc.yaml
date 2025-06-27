@@ -2,12 +2,12 @@ kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
   name: minio-pvc
-  namespace: samouelian-intel
 spec:
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
       storage: 100Gi
-  storageClassName: minio-storage
+  storageClassName: {{.Values.storage-class}}
   volumeMode: Filesystem
+  volumeName: minio-pv
