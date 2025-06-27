@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: model-config
+  namespace: {{ .Release.Namespace }}
+data:
+  generative-model-name: "{{ .Values.generativeModelName }}"

@@ -2,6 +2,7 @@ kind: Deployment
 apiVersion: apps/v1
 metadata:
   name: minio
+  namespace: {{ .Release.Namespace }}
   annotations:
     deployment.kubernetes.io/revision: '1'
 spec:
