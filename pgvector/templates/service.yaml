@@ -3,8 +3,8 @@ kind: Service
 metadata:
   name: pgvector-postgres-service
   labels:
-    app.kubernetes.io/name: {{.Release.Name}}
-    app.kubernetes.io/instance: {{.Release.Name}}
+    app.kubernetes.io/name: {{.Release.Namespace}}
+    app.kubernetes.io/instance: {{.Release.Namespace}}
     app.kubernetes.io/managed-by: Helm
 spec:
   selector:

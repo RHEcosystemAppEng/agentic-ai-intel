@@ -27,4 +27,4 @@ maintainers:
   - name: Peter Samouelian
     email: psamouel@redhat.com
 sources:
-  - https://github.com/your-org/pgvector-helm-chart
+  - https://github.com/RHEcosystemAppEng/agentic-ai-intel
