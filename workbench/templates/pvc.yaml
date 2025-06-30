@@ -3,9 +3,9 @@ apiVersion: v1
 metadata:
   annotations:
     openshift.io/description: ''
-    openshift.io/display-name: persistent-volume-claim-notebook
-  name: persistent-volume-claim-notebook
-  namespace: {{ .Release.Namespace }}
+    openshift.io/display-name: workbench-pvc
+  name: workbench-pvc
+  namespace: {{.Release.Namespace}}
   finalizers:
     - kubernetes.io/pvc-protection
   labels:
@@ -15,5 +15,7 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 200Gi
+      storage: 100Gi
+  storageClassName: {{.Values.storageClassName}}
   volumeMode: Filesystem
+  volumeName: workbench-pv
