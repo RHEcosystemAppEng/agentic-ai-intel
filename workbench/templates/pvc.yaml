@@ -16,6 +16,6 @@ spec:
   resources:
     requests:
       storage: 100Gi
-  storageClassName: {{.Values.storageClassName}}
+  storageClassName: {{.Values.storageClass}}
   volumeMode: Filesystem
   volumeName: workbench-pv
