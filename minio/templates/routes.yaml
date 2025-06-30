@@ -2,9 +2,9 @@ kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
   name: minio-ui
-  namespace: {{ .Release.Namespace }}
+  namespace: {{.Release.Namespace }}
 spec:
-  host: minio-ui-{{.Release.Namespace}}.apps.{{.Values.storage-class}}
+  host: minio-ui-{{.Release.Namespace}}.apps.{{.Values.storageClass}}
   to:
     kind: Service
     name: minio-service
@@ -22,7 +22,7 @@ metadata:
   name: minio-api
   namespace: {{.Release.Namespace}}
 spec:
-  host: minio-api-{{.Release.Namespace}}.apps.{{.Values.storage-class}}
+  host: minio-api-{{.Release.Namespace}}.apps.{{.Values.storageClass}}
   to:
     name: minio-service
     weight: 100

@@ -9,6 +9,6 @@ spec:
   resources:
     requests:
       storage: 100Gi
-  storageClassName: {{.Values.storage-class}}
+  storageClassName: {{.Values.storageClass}}
   volumeMode: Filesystem
   volumeName: minio-pv
