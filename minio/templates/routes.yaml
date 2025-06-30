@@ -4,7 +4,7 @@ metadata:
   name: minio-ui
   namespace: {{.Release.Namespace }}
 spec:
-  host: minio-ui-{{.Release.Namespace}}.apps.{{.Values.storageClass}}
+  host: minio-ui-{{.Release.Namespace}}.apps.{{.Values.nodeName}}
   to:
     kind: Service
     name: minio-service
@@ -22,7 +22,7 @@ metadata:
   name: minio-api
   namespace: {{.Release.Namespace}}
 spec:
-  host: minio-api-{{.Release.Namespace}}.apps.{{.Values.storageClass}}
+  host: minio-api-{{.Release.Namespace}}.apps.{{.Values.nodeName}}
   to:
     name: minio-service
     weight: 100
