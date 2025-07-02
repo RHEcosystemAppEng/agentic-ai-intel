@@ -2,7 +2,7 @@ import streamlit as st
 
 # Placeholder for your backend function
 def submitQuery(query: str) -> str:
-    # Replace this with your actual logic
+    # Now we just need to connect this to the code in the workbenc-source project
     return f"Echo: {query}"
 
 # Streamlit UI
