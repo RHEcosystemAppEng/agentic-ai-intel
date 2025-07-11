@@ -12,6 +12,6 @@ spec:
   resources:
     requests:
       storage: 20Gi
-  storageClassName: {{.Values.storageClass}}
+  #storageClassName: {{.Values.storageClass}}
   volumeMode: Filesystem
-  volumeName: pgvector-pv
+  #volumeName: pgvector-pv

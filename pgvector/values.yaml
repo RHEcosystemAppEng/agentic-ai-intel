@@ -1,4 +1,4 @@
 applicationName: pgvector
-nodeName: gretchen.fm2aihpcsed.com
-hostName: gretchensno.fm2aihpcsed.com #Needed for node-local storage during testing; a different storage class should be configured later
-storageClass: local-storage
+#nodeName: gretchen.fm2aihpcsed.com
+#hostName: gretchensno.fm2aihpcsed.com #Needed for node-local storage during testing; a different storage class should be configured later
+#storageClass: local-storage
