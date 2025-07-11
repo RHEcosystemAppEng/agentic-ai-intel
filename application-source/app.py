@@ -41,11 +41,11 @@ def submitQuery(query: str) -> str:
         is_function_calling_model=False,
     )
 
-    sql_database = SQLDatabase(engine, include_tables=["products"])
-
     uri = get_db_connection_uri()
     engine = create_engine(uri)
     metadata_obj = MetaData()
+
+    sql_database = SQLDatabase(engine, include_tables=["products"])
 
     query_engine = NLSQLTableQueryEngine(
         sql_database=sql_database, tables=["products"], llm=llm
