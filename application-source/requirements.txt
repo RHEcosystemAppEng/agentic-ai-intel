@@ -7,7 +7,6 @@ SQLAlchemy
 pandas 
 boto3
 streamlit-antd-components
-tensorflow
 llama-index
 llama-index-vector-stores-postgres
 llama-index-llms-openai-like
